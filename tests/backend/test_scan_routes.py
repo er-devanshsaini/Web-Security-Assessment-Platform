@@ -1,7 +1,7 @@
 from fastapi.testclient import TestClient
 
-from app.database.models import Finding, Scan
-from app.main import app
+from backend.app.database.models import Finding, Scan
+from backend.app.main import app
 
 
 def test_scan_stats_endpoint_returns_counts() -> None:

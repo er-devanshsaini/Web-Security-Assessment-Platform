@@ -4,8 +4,8 @@ from reportlab.lib.pagesizes import letter
 from reportlab.lib.styles import getSampleStyleSheet
 from reportlab.platypus import Paragraph, SimpleDocTemplate, Spacer
 
-from app.core.config import settings
-from app.database.models import Finding, NetworkService, Scan
+from backend.app.core.config import settings
+from backend.app.database.models import Finding, NetworkService, Scan
 
 
 def generate_pdf_report(scan: Scan, findings: list[Finding], services: list[NetworkService]) -> str:

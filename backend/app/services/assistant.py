@@ -1,6 +1,6 @@
 from collections import Counter
 
-from app.database.models import Finding, NetworkService, Scan
+from backend.app.database.models import Finding, NetworkService, Scan
 
 
 def explain_scan(scan: Scan, findings: list[Finding], services: list[NetworkService]) -> tuple[str, list[str]]:

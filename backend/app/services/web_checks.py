@@ -1,5 +1,5 @@
-from app.database.models import Finding
-from app.services.http_scanner import HttpObservation, SECURITY_HEADERS, find_missing_security_headers
+from backend.app.database.models import Finding
+from backend.app.services.http_scanner import HttpObservation, SECURITY_HEADERS, find_missing_security_headers
 
 
 def analyze_http_security(scan_id: int, observation: HttpObservation) -> list[Finding]:

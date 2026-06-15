@@ -1,4 +1,4 @@
-from app.database.models import Finding, NetworkService
+from backend.app.database.models import Finding, NetworkService
 
 
 SEVERITY_POINTS = {

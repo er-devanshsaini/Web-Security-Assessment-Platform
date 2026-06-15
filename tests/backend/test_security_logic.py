@@ -1,8 +1,8 @@
-from app.database.models import Finding, NetworkService
-from app.services.http_scanner import HttpObservation, find_missing_security_headers
-from app.services.nmap_scanner import parse_nmap_xml
-from app.services.risk import calculate_risk_score
-from app.services.web_checks import analyze_cookie_security, analyze_http_security
+from backend.app.database.models import Finding, NetworkService
+from backend.app.services.http_scanner import HttpObservation, find_missing_security_headers
+from backend.app.services.nmap_scanner import parse_nmap_xml
+from backend.app.services.risk import calculate_risk_score
+from backend.app.services.web_checks import analyze_cookie_security, analyze_http_security
 
 
 def test_missing_security_headers_are_detected() -> None:

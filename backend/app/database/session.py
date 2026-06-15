@@ -3,8 +3,8 @@ from collections.abc import Generator
 from sqlalchemy import text
 from sqlmodel import Session, SQLModel, create_engine
 
-from app.core.config import settings
-from app.database import models
+from backend.app.core.config import settings
+from backend.app.database import models
 
 
 engine = create_engine(

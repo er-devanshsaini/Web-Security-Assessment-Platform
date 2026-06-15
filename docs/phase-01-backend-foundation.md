@@ -37,9 +37,9 @@ Line-by-line notes:
 
 - `from fastapi import FastAPI` imports the web framework class.
 - `asynccontextmanager` is used for FastAPI startup and shutdown lifecycle work.
-- `from app.api.routes import health` imports the health route module.
-- `from app.core.config import settings` loads app settings.
-- `from app.database.session import create_database_tables` imports database initialization.
+- `from backend.app.api.routes import health` imports the health route module.
+- `from backend.app.core.config import settings` loads app settings.
+- `from backend.app.database.session import create_database_tables` imports database initialization.
 - `def create_app() -> FastAPI:` wraps app creation so tests can reuse it.
 - `lifespan(...)` creates database tables before the app accepts requests.
 - `app = FastAPI(...)` creates the API object and sets metadata for docs.

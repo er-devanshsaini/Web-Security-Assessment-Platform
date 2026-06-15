@@ -2,8 +2,8 @@ import shutil
 import subprocess
 import xml.etree.ElementTree as ET
 
-from app.database.models import NetworkService
-from app.services.url_utils import is_private_or_local_hostname
+from backend.app.database.models import NetworkService
+from backend.app.services.url_utils import is_private_or_local_hostname
 
 
 def run_nmap_scan(scan_id: int, hostname: str) -> tuple[list[NetworkService], str | None]:

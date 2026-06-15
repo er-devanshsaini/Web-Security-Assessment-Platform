@@ -4,11 +4,11 @@ from fastapi import APIRouter, Depends, HTTPException
 from fastapi.responses import FileResponse
 from sqlmodel import Session, select
 
-from app.database.models import Finding, NetworkService, Scan
-from app.database.session import get_session
-from app.schemas import AssistantResponse, ScanCreate, ScanDetail, ScanRead
-from app.services.assistant import explain_scan
-from app.services.scan_runner import run_scan
+from backend.app.database.models import Finding, NetworkService, Scan
+from backend.app.database.session import get_session
+from backend.app.schemas import AssistantResponse, ScanCreate, ScanDetail, ScanRead
+from backend.app.services.assistant import explain_scan
+from backend.app.services.scan_runner import run_scan
 
 router = APIRouter(prefix="/scans", tags=["Scans"])
 

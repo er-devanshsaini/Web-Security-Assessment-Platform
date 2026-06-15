@@ -3,7 +3,7 @@ from urllib.parse import urlparse
 
 import httpx
 
-from app.core.config import settings
+from backend.app.core.config import settings
 
 
 SECURITY_HEADERS = {

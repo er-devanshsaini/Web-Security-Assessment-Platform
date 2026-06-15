@@ -3,13 +3,13 @@ from datetime import datetime, timezone
 import httpx
 from sqlmodel import Session
 
-from app.database.models import Finding, NetworkService, Scan
-from app.services.http_scanner import fetch_website
-from app.services.nmap_scanner import run_nmap_scan
-from app.services.reporting import generate_pdf_report
-from app.services.risk import calculate_risk_score
-from app.services.url_utils import get_hostname, normalize_url
-from app.services.web_checks import analyze_http_security
+from backend.app.database.models import Finding, NetworkService, Scan
+from backend.app.services.http_scanner import fetch_website
+from backend.app.services.nmap_scanner import run_nmap_scan
+from backend.app.services.reporting import generate_pdf_report
+from backend.app.services.risk import calculate_risk_score
+from backend.app.services.url_utils import get_hostname, normalize_url
+from backend.app.services.web_checks import analyze_http_security
 
 
 def run_scan(session: Session, scan: Scan, include_network_scan: bool) -> Scan:
