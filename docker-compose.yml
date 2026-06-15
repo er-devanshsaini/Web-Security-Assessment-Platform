@@ -1,0 +1,21 @@
+services:
+  backend:
+    build:
+      context: .
+      dockerfile: docker/backend.Dockerfile
+    ports:
+      - "8000:8000"
+    environment:
+      SAP_DATABASE_URL: "sqlite:////app/security_assessment.db"
+      SAP_REPORT_DIR: "/app/reports"
+    volumes:
+      - ./reports:/app/reports
+
+  frontend:
+    build:
+      context: .
+      dockerfile: docker/frontend.Dockerfile
+    ports:
+      - "5173:5173"
+    depends_on:
+      - backend

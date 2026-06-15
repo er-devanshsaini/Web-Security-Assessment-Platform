@@ -1,0 +1,16 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: #09090b;
+}
+
+input[type="checkbox"] {
+  accent-color: #34d399;
+}
